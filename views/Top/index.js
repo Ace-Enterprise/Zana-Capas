@@ -11,10 +11,13 @@ export const Top = () => {
         <p>
           Na Zana Capas, nossa missão é oferecer proteção de qualidade para
           carros, motos e bicicletas com capas projetadas para diferentes
-          necessidades. Explore nossas opções e descubra a capa ideal para o seu
+          necessidades. 
+          <br/>
+          <br/>
+          Explore nossas opções e descubra a capa ideal para o seu
           público.
         </p>
-        <button></button>
+        <button>Fazer orçamento</button>
       </div>
       <div className={styles.bottom__content}>
         <Image className={styles.car__icon} src={car} alt="car image" />

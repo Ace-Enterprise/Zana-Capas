@@ -10,7 +10,7 @@ import { Advantages } from '../views/Advantages';
 
 export default function Home() {
   return (
-    <body>
+    <div>
       <Head>
         <title>Zana Capas</title>
         <link rel="icon" href="/favicon.ico" />
@@ -47,6 +47,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </body>
+    </div>
   );
 }

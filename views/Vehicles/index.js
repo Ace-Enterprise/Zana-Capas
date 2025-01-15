@@ -6,31 +6,36 @@ export const Vehicles = () => {
       title: "Carro",
       image: "",
       description:
-        "Apresentamos nossa linha especial Alligator, uma capa automotiva com textura única, que alia resistência e design sofisticado. Seu material texturizado oferece uma estética premium, proporcionando ainda mais valor aos veículos cobertos. Essa capa é ideal para clientes que buscam diferenciação e alta performance em proteção.",
+        "Com opções de forro total, parcial ou sem forro. <br/> <br/> Tamanhos: P, M, G, GG, XG, XGG, VAN, e KOMBI. <br/> <br/> Modelos versáteis para proteção diária, tanto em ambientes internos quanto externos.",
     },
     {
       title: "Moto",
       image: "",
       description:
-        "Apresentamos nossa linha especial Cobra, uma capa automotiva com textura única, que alia resistência e design sofisticado. Seu material texturizado oferece uma estética premium, proporcionando ainda mais valor aos veículos cobertos. Essa capa é ideal para clientes que buscam diferenciação e alta performance em proteção.",
+        "Capas forradas e sem forro, projetadas para oferecer o máximo de proteção e praticidade. <br/> <br/> Tamanhos:  P, M, G, GG, XG, XGG <br/> <br/> Disponíveis em tamanho ajustável, ideais para diferentes tipos de motocicletas.",
     },
     {
       title: "Bike",
       image: "",
       description:
-        "Apresentamos nossa linha especial Python, uma capa automotiva com textura única, que alia resistência e design sofisticado. Seu material texturizado oferece uma estética premium, proporcionando ainda mais valor aos veículos cobertos. Essa capa é ideal para clientes que buscam diferenciação e alta performance em proteção.",
+        "Com e sem forro, além de compacta para fácil transporte e uso diário. <br/> <br/> Tamanho único",
     },
   ];
+
   return (
     <section>
-      {vehicles.map((vehicle) => (
-        <div className={styles.content}>
+      {vehicles.map((vehicle, index) => (
+        <div className={styles.content} key={index}>
           <div className={styles.presentation}>
             <h1>{vehicle.title}</h1>
             <span></span>
           </div>
           <div className={styles.text}>
-            <p>{vehicle.description}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: vehicle.description,
+              }}
+            />
           </div>
         </div>
       ))}

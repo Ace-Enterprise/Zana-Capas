@@ -1,9 +1,10 @@
 .nav {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  background-color: #d9d9d9;
+  background-color: #DDEDFF;
+  padding: 16px 4rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -17,7 +18,6 @@
     size: 24px;
     font-weight: 400;
     line-height: 29px;
-    margin-right: 4rem;
     text-decoration: none;
     gap: 2rem;
 
