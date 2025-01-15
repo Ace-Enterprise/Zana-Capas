@@ -7,6 +7,7 @@ import { Benefits } from '../views/Benefits';
 import { Presentation } from '../views/Presentation';
 import { Vehicles } from '../views/Vehicles';
 import { Advantages } from '../views/Advantages';
+import { Caroussel } from '../views/Caroussel';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Presentation />
         <Vehicles />
         <Advantages />
+        <Caroussel />
       </main>
 
       <style jsx global>{`

@@ -1,0 +1,49 @@
+.caroussel {
+  margin: 2rem auto 3rem auto; // Centraliza horizontalmente no viewport
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #DDEDFF;
+  border-radius: 10px; // Adiciona bordas arredondadas para uma estética melhor
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adiciona sombra para destaque
+
+  .wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide {
+    position: absolute;
+    top: 50%; // Centraliza verticalmente
+    left: 50%; // Centraliza horizontalmente
+    transform: translate(-50%, -50%); // Garante alinhamento perfeito ao centro
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    text-align: center;
+    width: 80%; // Ajuste para centralizar o conteúdo
+
+    &.active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1); // Adiciona escala para maior suavidade
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #000;
+    }
+  }
+}
