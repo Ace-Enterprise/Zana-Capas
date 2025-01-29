@@ -18,6 +18,16 @@ export const Caroussel = () => {
       description:
         "Linha completa de capas para diferentes veículos, com opções personalizadas para atender a diferentes públicos.",
     },
+    {
+      title: "Qualidade Garantida",
+      description:
+        "Materiais duráveis e resistentes, feitos para proteger veículos contra os elementos e desgaste.",
+    },
+    {
+      title: "Atendimento Exclusivo",
+      description:
+        "Suporte dedicado para atender suas necessidades, desde a escolha dos produtos até o pós-venda.",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,20 +40,27 @@ export const Caroussel = () => {
   }, [items.length]);
 
   return (
-    <div className={styles.caroussel}>
-      <div className={styles.wrapper}>
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`${styles.slide} ${
-              index === currentIndex ? styles.active : ""
-            }`}
-          >
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-          </div>
-        ))}
+    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 20px'}}>  
+      <h1
+      style={{textAlign: 'center', maxWidth: '350px', fontFamily: 'Inter', fontSize: 28, fontWeight: 400}}
+      >
+        Vantagens de Comprar na Zana Capas
+      </h1>
+      <div className={styles.caroussel}>
+        <div className={styles.wrapper}>
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.slide} ${
+                index === currentIndex ? styles.active : ""
+              }`}
+            >
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
