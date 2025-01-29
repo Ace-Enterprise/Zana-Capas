@@ -1,44 +1,54 @@
 .caroussel {
-  margin: 2rem auto 3rem auto; // Centraliza horizontalmente no viewport
-  width: 500px;
+  margin: 2rem auto 3rem auto;
+  width: 100%;
   height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   overflow: hidden;
   position: relative;
-  background-color: #DDEDFF;
-  border-radius: 10px; // Adiciona bordas arredondadas para uma estética melhor
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adiciona sombra para destaque
+  border-radius: 10px;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
     height: 240px;
+  }
+
+  .arrowButton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    z-index: 10;
+    padding: 0 10px;
+
+    &:hover {
+      color: #555;
+    }
   }
 
   .wrapper {
     display: flex;
-    position: relative;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    overflow-x: auto; // Permite rolagem horizontal
+    scroll-behavior: smooth; // Suaviza a rolagem
+    scroll-snap-type: x mandatory; // Força o alinhamento dos slides
+    gap: 2rem;
   }
 
   .slide {
-    position: absolute;
-    top: 50%; // Centraliza verticalmente
-    left: 50%; // Centraliza horizontalmente
-    transform: translate(-50%, -50%); // Garante alinhamento perfeito ao centro
-    opacity: 0;
-    transition: all 1s ease-in-out;
+    flex: 0 0 auto; // Impede que os slides encolham
+    max-width: 400px; // Cada slide ocupa 100% da largura do contêiner
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 80%; // Ajuste para centralizar o conteúdo
+    padding: 0 20px;
+    background-color: #ddedff;
 
-    &.active {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1); // Adiciona escala para maior suavidade
-    }
+    scroll-snap-align: start; // Alinha cada slide ao início do contêiner
 
     h2 {
       font-size: 1.8rem;

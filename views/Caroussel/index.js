@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.scss";
 
 export const Caroussel = () => {
@@ -28,33 +28,32 @@ export const Caroussel = () => {
       description:
         "Suporte dedicado para atender suas necessidades, desde a escolha dos produtos até o pós-venda.",
     },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 5000); // 5 segundos para cada slide
-    return () => clearInterval(interval);
-  }, [items.length]);
+  ];  
 
   return (
-    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 20px'}}>  
+    <section
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "0 20px",
+      }}
+    >
       <h1
-      style={{textAlign: 'center', maxWidth: '350px', fontFamily: 'Inter', fontSize: 28, fontWeight: 400}}
+        style={{
+          textAlign: "center",
+          maxWidth: "350px",
+          fontFamily: "Inter",
+          fontSize: 28,
+          fontWeight: 400,
+        }}
       >
         Vantagens de Comprar na Zana Capas
       </h1>
       <div className={styles.caroussel}>
         <div className={styles.wrapper}>
           {items.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.slide} ${
-                index === currentIndex ? styles.active : ""
-              }`}
-            >
+            <div key={index} className={styles.slide}>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
             </div>
