@@ -6,7 +6,7 @@ import pforro from "../../assets/pforro.png";
 
 export const Benefits = () => {
   return (
-    <section className={styles.rows}>
+    <section className={styles.rows} id="capas">
       <div className={styles.row}>
         <Image src={tforro} />
         <div styles={styles.content}>

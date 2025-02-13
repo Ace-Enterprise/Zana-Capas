@@ -5,7 +5,7 @@ import gold from "../../assets/gold 2.png";
 import alligator from "../../assets/alligator 1.png";
 export const Presentation = () => {
   return (
-    <section className={styles.presentation}>
+    <section className={styles.presentation} id="linhas">
       <div style={{ padding: "2rem 0", textAlign: "center" }}>
         <h1 style={{ font: "Inter", fontWeight: 700, fontSize: 64, color: "#042D4F" }}>Linhas</h1>
       </div>
@@ -26,7 +26,9 @@ export const Presentation = () => {
             Essa capa é ideal para clientes que buscam{" "}
             <strong>diferenciação e alta performance em proteção</strong>.
           </p>
-          <button>comprar agora</button>
+
+          <br />
+          <a href="https://wa.me/5511981219399">comprar agora</a>
         </div>
         <Image src={alligatorDemonstration} />
       </div>
