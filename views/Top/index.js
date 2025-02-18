@@ -17,9 +17,9 @@ export const Top = () => {
           Explore nossas opções e descubra a capa ideal para o seu
           público.
         </p>
-        <button>Fazer orçamento</button>
+        <a href="https://wa.me/5511981219399">Fazer orçamento</a>
       </div>
-      <div className={styles.bottom__content}>
+      <div className={styles.bottom__content}  id="advantages">
         <Image className={styles.car__icon} src={car} alt="car image" />
         <div className={styles.content__list}>
           <h1>Características</h1>

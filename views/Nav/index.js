@@ -8,13 +8,16 @@ export const Nav = () => {
       <Image src={logo} alt="Zana Capas" width={200}  />
       <ul className={styles.links}>
         <li className={styles.link}>
-          <a href="#presentation">Produtos</a>
+          <a href="#capas">Produtos</a>
         </li>
         <li className={styles.link}>
           <a href="#advantages">Características</a>
         </li>
         <li className={styles.link}>
-          <a href="#vehicles">Contato</a>
+          <a href="#linhas">Linhas</a>
+        </li>
+        <li className={styles.link}>
+          <a href="https://wa.me/5511981219399">Contato</a>
         </li>
       </ul>
     </nav>

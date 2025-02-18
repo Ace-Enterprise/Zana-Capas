@@ -37,6 +37,7 @@ export const Caroussel = () => {
         flexDirection: "column",
         alignItems: "center",
         padding: "0 20px",
+        margin: "50px 0"
       }}
     >
       <h1
@@ -46,6 +47,7 @@ export const Caroussel = () => {
           fontFamily: "Inter",
           fontSize: 28,
           fontWeight: 400,
+
         }}
       >
         Vantagens de Comprar na Zana Capas
